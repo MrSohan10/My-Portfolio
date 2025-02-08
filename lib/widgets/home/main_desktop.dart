@@ -7,11 +7,10 @@ class MainDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
+
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 20),
-      height: height / 1.2,
-      constraints: const BoxConstraints(minHeight: 350.0),
+      
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

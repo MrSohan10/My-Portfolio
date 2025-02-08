@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/constants/color/app_color.dart';
+
 import 'package:my_portfolio/constants/screen/size.dart';
 import 'package:my_portfolio/widgets/home/end_drawer_mobile.dart';
 import 'package:my_portfolio/widgets/home/header_desktop.dart';
@@ -7,6 +7,9 @@ import 'package:my_portfolio/widgets/home/header_desktop.dart';
 import 'package:my_portfolio/widgets/home/header_mobile.dart';
 import 'package:my_portfolio/widgets/home/main_desktop.dart';
 import 'package:my_portfolio/widgets/home/main_mobile.dart';
+import 'package:my_portfolio/widgets/home/plateforms_and_skills.dart';
+import 'package:my_portfolio/widgets/home/projects_section.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,8 +23,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
+
 
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
@@ -47,31 +49,15 @@ class _HomePageState extends State<HomePage> {
                 MainDesktop()
               else
                 MainMobile(),
-
-              // SKILL
-              Container(
-                height: 500,
-                width: double.maxFinite,
-                color: Colors.blueGrey,
-              ),
-              // PROJECT
-              Container(
-                height: 500,
-                width: double.maxFinite,
-              ),
-              // CONTACT
-              Container(
-                height: 500,
-                width: double.maxFinite,
-                color: Colors.blueGrey,
-              ),
-              // FOOTER
-              Container(
-                height: 500,
-                width: double.maxFinite,
+              // platforms and skills
+              PlateformsAndSkills(constraints: constraints,),
+                    // PROJECTS
+              ProjectsSection(
+               
               ),
             ],
           ));
     });
   }
 }
+

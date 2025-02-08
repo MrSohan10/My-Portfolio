@@ -4,15 +4,12 @@ import 'package:my_portfolio/constants/color/app_color.dart';
 class MainMobile extends StatelessWidget {
   const MainMobile({super.key});
 
-
   @override
   Widget build(BuildContext context) {
-        final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 40, vertical: 30),
-      height: height,
-      constraints: BoxConstraints(minHeight: 560),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
